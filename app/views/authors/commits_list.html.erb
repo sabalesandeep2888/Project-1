@@ -1,0 +1,15 @@
+<h1>Commits of authors</h1>
+<% @commits_list.each do |list| %>
+  <tr>
+    <td><%= @commits.sha %></td>
+    <td><%= @commits.repository_id %></td>
+    <td><%= @commits.comment %></td>
+    <td><%= @commits.created_at %></td>
+    <td><%= @commits.updated_at%></td>
+  <tr>
+    <%= link_to 'New Author', new_author_path %>
+
+    <%= link_to 'Edit', edit_author_path(@author) %> |
+    <%= link_to 'Back', authors_path %> |
+
+
